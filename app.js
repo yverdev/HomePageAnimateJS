@@ -1,3 +1,4 @@
+// Selct Elt
 const banner = document.querySelector('.banner');
 const slider = document.querySelector('.background');
 const logo = document.querySelector('#logo');
@@ -7,6 +8,7 @@ const btnclose = document.querySelector('.closebtn');
 const nav = document.getElementById('myNav');
 const letters = document.querySelectorAll('.letters');
 
+// TimeLine creation
 const tl = new TimelineMax();
 
 tl
@@ -17,7 +19,7 @@ tl
 .from(logo, 1, {x:"10%", ease: Back.easeOut.config(1,7)}, "-=2")
 .staggerFrom(letters, 1, {opacity:0, ease: Back.easeOut.config(1,7)}, 0.2, "-=0.5");
 
-
+// Evt listenning and associated method 
 hamburger.addEventListener('click', function(){
     TweenMax.to(nav, 0.1,{right:0});
 })
